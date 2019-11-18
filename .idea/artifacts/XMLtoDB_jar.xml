@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="XMLtoDB:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/XMLtoDB_jar</output-path>
+    <root id="archive" name="XMLtoDB.jar">
+      <element id="module-output" name="XMLtoDB" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../mysql-connector-java-5.1.48-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../apache-logging-log4j.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

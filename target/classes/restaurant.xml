@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rest:restaurant xmlns:rest="http://epam.tc.com/restSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://epam.tc.com/restSchema restaurant.xsd">
+
+    <orders>
+        <order id="O-4">
+            <ordTableNumber>3</ordTableNumber>
+            <ordTitle>Cake</ordTitle>
+            <time>16</time>
+            <price>10</price>
+        </order>
+        <order id="O-5">
+            <ordTableNumber>7</ordTableNumber>
+            <ordTitle>Coffee</ordTitle>
+            <time>19</time>
+            <price>20</price>
+        </order>
+        <order id="O-6">
+            <ordTableNumber>6</ordTableNumber>
+            <ordTitle>Soup</ordTitle>
+            <time>48</time>
+            <price>35</price>
+        </order>
+    </orders>
+    <dishes>
+        <dish id="D-1">
+            <dishTableNumber>3</dishTableNumber>
+            <dishTitle>Cake</dishTitle>
+        </dish>
+        <dish id="D-2">
+            <dishTableNumber>7</dishTableNumber>
+            <dishTitle>Coffee</dishTitle>
+        </dish>
+        <dish id="D-3">
+            <dishTableNumber>11</dishTableNumber>
+            <dishTitle>Spaghetti</dishTitle>
+        </dish>
+    </dishes>
+    <employees>
+        <employee id="IW-4">
+            <name>Ольга</name>
+            <surname>Шишко</surname>
+            <age>23</age>
+            <category>Waiter</category>
+            <dob>01/03/1996</dob>
+        </employee>
+        <employee id="IW-5">
+            <name>Диана</name>
+            <surname>Стадник</surname>
+            <age>20</age>
+            <category>Waiter</category>
+            <dob>30/09/1999</dob>
+        </employee>
+        <employee id="IC-2">
+            <name>Алина</name>
+            <surname>Лосева</surname>
+            <age>25</age>
+            <category>Cook</category>
+            <dob>25/07/1994</dob>
+        </employee>
+        <employee id="IC-4">
+            <name>Кадукова</name>
+            <surname>Анна</surname>
+            <age>19</age>
+            <category>Waiter</category>
+            <dob>16/02/2000</dob>
+        </employee>
+    </employees>
+
+</rest:restaurant>

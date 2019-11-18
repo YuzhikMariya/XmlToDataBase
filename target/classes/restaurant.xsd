@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epam.tc.com/restSchema"
+        xmlns:tns="http://epam.tc.com/restSchema">
+
+    <element  name="restaurant" type="tns:RestaurantType" />
+
+    <complexType name="RestaurantType" >
+        <sequence>
+            <element name="orders" type="tns:OrderListType"/>
+            <element name="dishes" type="tns:DishListType"/>
+            <element name="employees" type="tns:EmployeeListType"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="OrderListType">
+        <sequence>
+            <element name="order" type="tns:OrderType" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="DishListType">
+        <sequence>
+            <element name="dish" type="tns:DishType" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="EmployeeListType">
+        <sequence>
+            <element name="employee" type="tns:EmployeeType" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+
+
+    <complexType name="OrderType">
+        <sequence>
+            <element name="ordTableNumber" type="tns:TableType"/>
+            <element name="ordTitle" type="tns:TitleType"/>
+            <element name="time" type="nonNegativeInteger"/>
+            <element name="price" type="nonNegativeInteger"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+
+    <complexType name="EmployeeType">
+        <sequence >
+            <element name="name" type="string"/>
+            <element name="surname" type="string"/>
+            <element name="age" type="positiveInteger"/>
+            <element name="category" type="tns:CategoryType"/>
+            <element name="dob" type="tns:DoBType"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+
+    <complexType name="DishType">
+        <sequence>
+            <element name="dishTableNumber" type="tns:TableType"/>
+            <element name="dishTitle" type="tns:TitleType"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+
+    <simpleType name="TitleType">
+        <restriction base="string">
+            <enumeration value="Coffee"/>
+            <enumeration value="Cake"/>
+            <enumeration value="Spaghetti"/>
+            <enumeration value="Soup"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TableType">
+        <restriction base="nonNegativeInteger">
+            <minInclusive value="0"/>
+            <maxInclusive value="14"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="CategoryType">
+        <restriction base="string">
+            <enumeration value="Waiter"/>
+            <enumeration value="Cook"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="DoBType">
+        <restriction base="string">
+            <pattern value="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"/>
+        </restriction>
+    </simpleType>
+
+</schema>
